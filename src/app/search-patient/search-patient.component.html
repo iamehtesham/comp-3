@@ -1,0 +1,40 @@
+<div class="col-md-6 offset-md-3">
+    <h3>Search Patient</h3>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group" style="margin-top: 10px">
+          <label>Enter Patient Id</label>
+          <input
+            type="text"
+            class="form-control"
+            id="id"
+            [(ngModel)]="searchId"
+            name="id"
+          />
+        </div>
+
+  
+      <button class="btn btn-success" style="margin-top: 10px" type="submit">
+        Search
+      </button>
+    </form>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Visited Doctor Name</th>
+          <th>Date of Visit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{patient?.id}}</td>
+          <td>{{ patient?.name }}</td>
+          <td>{{ patient.age }}</td>
+          <td>{{ patient.plainDto?.name }}</td>
+          <td>{{patient.dateOfVisit}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

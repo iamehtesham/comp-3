@@ -1,0 +1,17 @@
+<h2>Doctors List</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Specialized Field</th>
+      <th>Number of Patient Attended</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let d of doctors">
+      <td>{{ d.name }}</td>
+      <td>{{ d.specialist_fields }}</td>
+      <td>{{ d.patientDto.length }}</td>
+    </tr>
+  </tbody>
+</table>

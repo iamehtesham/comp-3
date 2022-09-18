@@ -1,0 +1,70 @@
+<div class="col-md-6 offset-md-3">
+    <h3>Add Doctor</h3>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group" style="margin-top: 10px">
+        <label>Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          [(ngModel)]="doctor.name"
+          name="name"
+        />
+      </div>
+      <div class="form-group">
+        <label>Gender</label>
+        <!-- <input
+          type="text"
+          class="form-control"
+          id="gender"
+          [(ngModel)]="doctor.gender"
+          name="gender"
+        /> -->
+        <div class="form-group col-md-4 mb-1">
+          <input
+            type="radio"
+            class="form-check-input"
+            id="gender"
+            value="Male"
+            name="gender"
+            [(ngModel)]="doctor.gender"
+          />
+         
+          <label class="form-check-label" style="margin-left: 5px" for="exampleCheck1"> Male</label>
+        </div>
+
+        <div class="form-group col-md-4 mb-1">
+          <input
+            type="radio"
+            class="form-check-input"
+            id="gend"
+            value="Female"
+            name="gender"
+            [(ngModel)]="doctor.gender"
+          />
+          <label class="form-check-label" style="margin-left: 5px" for="exampleCheck1"> Female</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Age</label>
+        <input
+          type="text"
+          class="form-control"
+          id="age"
+          [(ngModel)]="doctor.age"
+          name="age"
+        />
+      </div>
+      <div class="form-group">
+        <label>Specialist Field</label>
+        <input
+          type="text"
+          class="form-control"
+          id="field"
+          [(ngModel)]="doctor.specialist_fields"
+          name="field"
+        />
+      </div>
+      <button class="btn btn-success" style="margin-top: 10px" type="submit">Submit</button>
+    </form>
+    </div> 

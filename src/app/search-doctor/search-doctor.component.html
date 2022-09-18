@@ -1,0 +1,49 @@
+<div class="col-md-6 offset-md-3">
+  <h3>Search Doctor</h3>
+  <form (ngSubmit)="onSubmit()">
+    <!-- <div class="form-group" style="margin-top: 10px">
+        <label>Id</label>
+        <input
+          type="text"
+          class="form-control"
+          id="id"
+          [(ngModel)]="doctor.id"
+          name="id"
+        />
+      </div> -->
+
+    <div class="form-group">
+      <label>Select Doctor</label>
+      <select
+        required
+        type="text"
+        class="form-control"
+        (change)="changeDoctor($event)"
+      >
+        <option *ngFor="let d of doctors" [value]="d.id">{{ d.name }}</option>
+      </select>
+    </div>
+
+    <button class="btn btn-success" style="margin-top: 10px" type="submit">
+      Search
+    </button>
+  </form>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Specialization Field</th>
+        <th>Number of Patient Attended</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{doctor.id}}</td>
+        <td>{{ doctor.name }}</td>
+        <td>{{ doctor.specialist_fields }}</td>
+        <td>{{ doctor.patientDto?.length }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
